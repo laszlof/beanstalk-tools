@@ -32,7 +32,6 @@ def export(t)
                     :body => job.body)
     $stdout.flush
     $stderr.puts "Got job #{job.id} (+#{job.delay})"
-    # job.delete
   end
 rescue Beanstalk::TimedOut
   nil
